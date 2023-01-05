@@ -1,11 +1,13 @@
-const Amin = require("./second")
-console.log("Hello World")
-var a =20
-var b = 30
-console.log(a+b)
-c= a*b
-console.log(c,Amin)
+var http=require('http');
 
+var server=http.createServer(function(req,res){
+    res.end('test');
+});
 
+server.on('listening',function(){
+    console.log('ok, server is running');
+});
+
+server.listen(80);
 
   
